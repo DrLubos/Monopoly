@@ -1,0 +1,44 @@
+// Pouzite jeden z podporovanych oddelovacich znakov "=" "*" "_" tieto znaky tiez na nic ine nepouzivajte za nimi oznacenie druh karty POZOR enum musi existova takze su moznosti: "Sanca" a "Truhlica"
+// Dokial nepouzijete oddelovaci znak tak vsetky karty neskor sa ulozia do prislusneho druhu karty.
+// 1. Najskor napiste typ karty dostupne su: "Posun" "NavratFinancii" "Priepustka" "ZaMreze". Potom ostatne polia oddelujte 'ciarkou' takisto 'ciarku' nepouzivajte pri popise karty pouzivajte ju iba pri oddelovani poli.
+// 2. Potom napiste retazec ktory bude reprezentovat nazov karty toto nie je treba ked je typ Priepustka alebo ZaMreze
+// 3. a) Pri Posun pouzite dalsie pole na jednu z moznosti: Cele cislo (urcuje o kolko krokov sa urobi posun ak pouzijete zaporne cislo tak to je pre posun vzad). V dalsom poli Nazov Policka (kde sa hrac presunie ale pre tuto funkcionalitu uistite sa ze to iste policko exituje aj na mape). Dalsie pole je TypPolicka (odporucane typy: "DOPRAVA" "SPOLOCNOST" ale mozete pouzit aj ine typy z enumu TypNehnutelnosti)
+// 3. b) Pri Platbe pouzite dalsie pole na DruhPlatby ale treba aby existoval aj enum, dostupne su: "Jednorazova" "Domy" "Ostatnym_Hracom". Potom pouzite Cele cislo ktore bude reprezentovat ciastku na zaplatenie. Ked mate enum typu "Domy" tak mozete pouzit aj dalsie policko s Celym cislom toto bude reprezentovat cenu platby za hotel
+// 3. c) Pri NavratFinancii pouzite dalsie pole s Celym cislom ktore reprezentuje kolko hrac ziska penazi. Mozete este pouzit dalsie pole ak sa ho rozhodnete pouzit tak nezalezi co do neho zapisete ale pre program to bude znamenat ze hrac zinkasuje obnos penazi v predchadzajucom poli od kazdeho hraca v hre
+// Premiesanie prebieha automaticky v kode takze mozete ukladat take iste typy kariet za sebou
+
+=Sanca
+Posun, Posun sa na BoardWalk, BoardWalk
+Posun, Posun sa na Start, Start
+Posun, Posun sa na Illinois Avenue, Illinois Avenue
+Posun, Posun sa na St. Charles Place, St. Charles Place
+Posun, Posun sa na najblizsiu zeleznicu, DOPRAVA
+Posun, Posun sa na najblizsiu zeleznicu, DOPRAVA
+Posun, Posun sa na najblizsiu zeleznicu, SPOLOCNOST
+NavratFinancii, Banka vam vyplatila dividenty vo vyske 50$, 50
+Priepustka
+Posun, Posun sa o 3 policka spat, -3
+ZaMreze
+Platba,Generalna oprava zaplatte za kazdy dom 25$ a hotel 100$,DOMY,25,100
+Platba, Pokuta vo vyske 15$,JEDNORAZOVA,15
+Posun, Chodte na reading Railroad,Reading Railroad
+Platba, Boli ste zvolený za predsedu správnej rady. Vyplaťte každému hráčovi 50$, Ostatnym_Hracom, 50
+NavratFinancii, Splatnosť vášho stavebného úveru. Zinkasujte 150$, 150
+
+=Truhlica
+Posun, Posun sa na Start, Start
+NavratFinancii, Bankova chyba ziskavate 200$, 200
+Platba, Platba pre doktora 50$, JEDNORAZOVA, 50
+NavratFinancii, Z bury dostavate 50$, 50
+Priepustka
+ZaMreze
+NavratFinancii, Dovolenkový fond dozrieva. Príjem 100$, 100
+NavratFinancii, Navrat dani ziskavate 20$, 20
+NavratFinancii, Mate narodeniny od kazdeho hraca ziskavate 10$, 10, true
+NavratFinancii, Doby splatnosti životného poistenia. Zinkasujte 100$, 100
+Platba, Nemocnicne poplatky vo vyske 100$,Jednorazova, 100
+Platba, Zaplatte skolne vo vyske 50$,jednorazova, 50
+NavratFinancii, Ziskavate poplatok za konzultaciu vo vyske 20$, 20
+Platba, Gerneralna oprava zaplatte za kazdy dom 40$ a hotel 115$,Domy, 40, 115
+NavratFinancii, Vyhrali ste v sutaze krasy 10$, 10
+NavratFinancii, Dostali ste 100$, 100

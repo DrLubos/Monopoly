@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="shapesGE-SK-1.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/shapesGE-SK-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

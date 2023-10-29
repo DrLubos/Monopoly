@@ -1,0 +1,48 @@
+// 1. Najskor napiste retazec pre typ policka dostupne su: "Start" "Truhlica" "Sanca" "Vazenie" "PosielanieDoVazenia" "Parkovanie" "Dan" 'Alebo nazov pozemku/nehnutelnosti'". Potom ostatne polia oddelujte 'cairkou', takisto 'ciarku' nepouzivajte pri popise karty ale pouzivajte ju iba pri oddelovani poli.
+// 2. Ak ste zadali "Start" "Truhlica" "Sanca" "Vazenie" alebo "Posielanie do Vazenia" tak uz nie je potrebne aby ste vyplnali dalsie polia
+// 3. a) Pri Dan pouzite dalsie pole na popis k policku pre Dan. Dalsie pole Celeho cisla pre pevnu ciastku dane a mozete pouzit aj dalsie pole Celeho cisla ktore bude repezentovat velkost dane v %
+// 3. b) Pri ostatnych polickach pouzite najskor dalsie pole pre Cele cislo ktore bude predstavovat cenu policka
+//       Potom zadajte TypNehnutelnosti ale treba aby existoval aj enum dostupne su: "DOPRAVA" "SPOLOCNOST" "MODRA" "ZELENA" "ZLTA" "CERVENA" "ORANZOVA" "RUZOVA" "BIELA" "FIALOVA"
+//          A) Ak ste zvolili TypNehnutelnosti "DOPRAVA" alebo "SPOLOCNOST" staci ak zadate este Cele cislo ktore bude predstavovat velkost najmu ak hrac vlastni 1 nehnutelnost ostatne najmy sa vypocitaju pomocou algoritmov. Pre "DOPRAVA" su to nasobky podla toho kolko ma hrac tychto policok. Pre "SPOLOCNOST" je to nasobok suctu na kocke a ak hrac ma viac ako 2 spolocnosti tak najom je sucet kociek *10 (v jednoduchosti ak hrac ma jednu tak sa pocita sucet kociek * hodnota v policku a ak hrac ma viac ako 2 spolocnosti tak najom je sucet kociek * 10
+//          B) Inak zadajte polia Celych cisel v tomto poradi: 'cena najmu' 'cena najmu s 1 domom' 'cena najmu s 2 domami' 'cena najmu s 3 domami' 'cena najmu so 4 domami' 'cena najmu s hotelom'
+
+Start
+Mediteranean Avenue,60,FIALOVA,2,10,30,90,160,250
+Truhlica
+Baltic Avenue,60,FIALOVA,4,20,60,180,320,450
+Dan,Dan z prijmu,200,10
+Reading Railroad,200,DOPRAVA,25,50,100,200
+Oriental Avenue,100,BIELA,6,30,90,270,400,550
+Sanca
+Vermont Avenue,100,BIELA,6,30,90,270,400,550
+Conectucut Avenue,120,BIELA,8,40,100,300,450,600
+Vazenie
+St. Charles Place,140,RUZOVA,10,50,150,450,625,750
+Elektrina,150,SPOLOCNOST,4
+States Avenue,140,RUZOVA,10,50,150,450,625,750
+Virginia Avenue,160,RUZOVA,12,60,180,500,700,900
+Pensylvania Railroad,200,DOPRAVA,25,50,100,200
+St. James Place,180,ORANZOVA,14,70,200,550,750,950
+Truhlica
+Tenessee Avenue,180,ORANZOVA,14,70,200,550,750,950
+New York Avenue,200,ORANZOVA,16,80,220,600,800,1000
+Parkovanie
+Kentucky Avenue,220,CERVENA,18,90,250,700,875,1050
+Sanca
+Indiana Avenue,220,CERVENA,18,90,250,700,875,1050
+Illinois Avenue,240,CERVENA,20,100,300,750,925,1050
+B & O. Railroad,200,DOPRAVA,25,50,100,200
+Atlantic Avenue,260,ZLTA,22,110,330,800,975,1150
+Ventnor Avenue,260,ZLTA,22,110,330,800,975,1150
+Voda,150,SPOLOCNOST,4
+Marvin Gardens,280,ZLTA,24,120,360,850,1025,1200
+PosielanieDoVazenia
+Pacific Avenue,300,ZELENA,26,130,390,900,1100,1275
+North Carolina Avenue,300,ZELENA,26,130,390,900,1100,1275
+Truhlica
+Pensylvania Avenue,330,ZELENA,28,150,450,1000,1200,1400
+Short Line,200,DOPRAVA,25,50,100,200
+Sanca
+Park Place,350,MODRA,35,175,500,1100,1300,1500
+Dan,Dan z luxusu,75,0
+Boardwalk,400,MODRA,50,200,600,1400,1700,2000
